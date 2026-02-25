@@ -1,0 +1,163 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Book a Session — AstroYoga</title><link rel="stylesheet" href="style.css"><style>
+.booking-hero { padding:9rem 6rem 5rem; background:var(--warm-cream); text-align:center; }
+.calendly-section { padding:2rem 4rem 6rem; background:var(--warm-cream); }
+.calendly-embed { background:white; border-radius:8px; overflow:hidden; box-shadow:0 10px 40px rgba(92,61,46,0.08); min-height:700px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:1.5rem; padding:4rem 2rem; }
+.setup-steps { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; max-width:900px; margin:3rem auto; }
+.step { background:white; padding:2rem; border-radius:4px; text-align:center; }
+.step-num { font-family:"Playfair Display",serif; font-size:2.5rem; color:var(--terracotta); opacity:0.4; display:block; }
+.step h4 { font-family:"Playfair Display",serif; color:var(--warm-brown); margin-bottom:0.5rem; }
+.step p { font-size:0.82rem; color:var(--text-mid); line-height:1.5; }
+.booking-info { padding:5rem 6rem; background:linear-gradient(160deg,#EDE6F5 0%,#F0E8F8 100%); display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start; }
+.info-card { background:white; padding:2rem; border-radius:4px; }
+.info-card h3 { font-family:"Playfair Display",serif; font-size:1.1rem; color:var(--warm-brown); margin-bottom:1rem; }
+.info-card li { font-size:0.85rem; color:var(--text-mid); padding:0.4rem 0; border-bottom:1px solid var(--sage-pale); display:flex; gap:0.5rem; list-style:none; }
+.info-card li::before { content:"✦"; color:var(--sage); font-size:0.6rem; margin-top:3px; }
+@media(max-width:900px){ .booking-hero{padding:7rem 1.5rem 3rem;} .calendly-section{padding:1rem 1.5rem 4rem;} .setup-steps{grid-template-columns:1fr;} .booking-info{grid-template-columns:1fr;padding:3rem 1.5rem;} }</style></head><body><nav id="main-nav"><a href="index.html" class="logo">Astro<span>Yoga</span></a><ul class="nav-links"><li><a href="index.html" >Home</a></li><li><a href="about.html" >About</a></li><li><a href="services.html" >Services</a></li><li><a href="courses.html" >Courses</a></li><li><a href="cosmic.html">Cosmic Calendar</a></li>
+    <li><a href="resources.html" >Free Resources</a></li><li><a href="faq.html" >FAQ</a></li><li><a href="blog.html" >Blog</a></li><li><a href="booking.html" class="nav-book">Book Now</a></li></ul><div style="display:flex;gap:0.8rem;align-items:center;"><div class="lang-toggle"><button class="lang-btn active" onclick="setLang('en')">EN</button><button class="lang-btn" onclick="setLang('es')">ES</button></div><button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button></div></nav><div class="mobile-menu" id="mobile-menu"><button class="mobile-close" onclick="toggleMenu()">✕</button><a href="index.html" onclick="toggleMenu()">Home</a><a href="about.html" onclick="toggleMenu()">About</a><a href="services.html" onclick="toggleMenu()">Services</a><a href="courses.html" onclick="toggleMenu()">Courses</a><a href="cosmic.html" onclick="toggleMenu()">Cosmic Calendar</a>
+  <a href="resources.html" onclick="toggleMenu()">Free Resources</a><a href="faq.html" onclick="toggleMenu()">FAQ</a><a href="blog.html" onclick="toggleMenu()">Blog</a><a href="booking.html" onclick="toggleMenu()" style="color:var(--terracotta);">Book Now ✦</a></div>
+<section class="booking-hero">
+  <div class="section-label center" data-lang="en">Book a Session</div>
+  <div class="section-label center" data-lang="es">Reservar Sesión</div>
+  <h1 style="font-size:clamp(2.5rem,4vw,4rem);" data-lang="en">Choose your<em>session</em></h1>
+  <h1 style="font-size:clamp(2.5rem,4vw,4rem);" data-lang="es">Elige tu<em>sesión</em></h1>
+  <p style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--text-mid);max-width:550px;margin:1rem auto 0;" data-lang="en">All sessions are online. Pick a time that works for you — Isidora will confirm and send you everything you need.</p>
+  <p style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--text-mid);max-width:550px;margin:1rem auto 0;" data-lang="es">Todas las sesiones son online. Elige un horario — Isidora confirmará y te enviará todo lo que necesitas.</p>
+</section>
+
+<section style="padding:3rem 4rem 2rem;background:var(--warm-cream);">
+  <div class="setup-steps">
+    <div class="step">
+      <span class="step-num">1</span>
+      <h4 data-lang="en">Choose a service</h4><h4 data-lang="es">Elige un servicio</h4>
+      <p data-lang="en">Select the session that resonates with you from the options below.</p>
+      <p data-lang="es" style="display:none;">Selecciona la sesión que resuene contigo entre las opciones.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">2</span>
+      <h4 data-lang="en">Pick a time</h4><h4 data-lang="es">Elige un horario</h4>
+      <p data-lang="en">Choose from Isidora's available slots — only times she's free are shown.</p>
+      <p data-lang="es" style="display:none;">Elige entre los horarios disponibles de Isidora — solo se muestran los que está libre.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">3</span>
+      <h4 data-lang="en">It goes to her calendar</h4><h4 data-lang="es">Va a su calendario</h4>
+      <p data-lang="en">Your booking is confirmed instantly and synced to Isidora's calendar.</p>
+      <p data-lang="es" style="display:none;">Tu reserva se confirma al instante y se sincroniza con el calendario de Isidora.</p>
+    </div>
+  </div>
+</section>
+
+<section class="calendly-section">
+  <!-- CALENDLY EMBED - Replace YOUR_CALENDLY_URL with Isidora's Calendly link -->
+  <!-- To set up: 1) Go to calendly.com, 2) Create free account, 3) Connect Google Calendar, 4) Set available times, 5) Copy link and replace below -->
+  
+  <div id="calendly-container">
+    <!-- Once Isidora has her Calendly link, replace this div with:
+    <div class="calendly-inline-widget" data-url="https://calendly.com/YOUR_USERNAME" style="min-width:320px;height:700px;"></div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+    -->
+    <div class="calendly-embed" style="padding:0;min-height:700px;">
+    <!-- Calendly inline widget -->
+    <div class="calendly-inline-widget" data-url="https://calendly.com/isidora-astroyoga?hide_landing_page_details=1&hide_gdpr_banner=1&primary_color=7B5EA7" style="min-width:320px;height:700px;width:100%;"></div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      <div style="font-size:3rem;">📅</div>
+      <h3 style="font-family:'Playfair Display',serif;color:var(--warm-brown);" data-lang="en">Calendar Coming Soon</h3>
+      <h3 style="font-family:'Playfair Display',serif;color:var(--warm-brown);" data-lang="es">Calendario Próximamente</h3>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--text-mid);max-width:400px;text-align:center;" data-lang="en">Isidora is setting up her Calendly calendar. In the meantime, book directly through the link below.</p>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--text-mid);max-width:400px;text-align:center;" data-lang="es">Isidora está configurando su calendario Calendly. Mientras tanto, reserva directamente a través del enlace.</p>
+      <a href="https://encuadrado.com/p/isidora-astroyoga" target="_blank" class="btn-primary" data-lang="en">Book via Encuadrado →</a>
+      <a href="https://encuadrado.com/p/isidora-astroyoga" target="_blank" class="btn-primary" data-lang="es">Reservar en Encuadrado →</a>
+      <a href="https://www.instagram.com/_astroyoga_/" target="_blank" class="btn-outline" data-lang="en">Or DM on Instagram</a>
+      <a href="https://www.instagram.com/_astroyoga_/" target="_blank" class="btn-outline" data-lang="es">O DM en Instagram</a>
+    </div>
+  </div>
+</section>
+
+<section class="booking-info">
+  <div>
+    <h3 style="font-family:'Playfair Display',serif;color:var(--warm-brown);margin-bottom:1.5rem;" data-lang="en">Before your session</h3>
+    <h3 style="font-family:'Playfair Display',serif;color:var(--warm-brown);margin-bottom:1.5rem;" data-lang="es">Antes de tu sesión</h3>
+    <div class="info-card">
+      <ul>
+        <li data-lang="en">Have your birth date, time and place ready (for astrology sessions)</li><li data-lang="es">Ten tu fecha, hora y lugar de nacimiento listos (para sesiones de astrología)</li>
+        <li data-lang="en">Find a quiet, comfortable space</li><li data-lang="es">Encuentra un espacio tranquilo y cómodo</li>
+        <li data-lang="en">Have water nearby</li><li data-lang="es">Ten agua cerca</li>
+        <li data-lang="en">Come with an open heart and any questions you have</li><li data-lang="es">Ven con el corazón abierto y las preguntas que tengas</li>
+        <li data-lang="en">Sessions are via Zoom or Google Meet</li><li data-lang="es">Las sesiones son por Zoom o Google Meet</li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <h3 style="font-family:'Playfair Display',serif;color:var(--warm-brown);margin-bottom:1.5rem;" data-lang="en">All services & prices</h3>
+    <h3 style="font-family:'Playfair Display',serif;color:var(--warm-brown);margin-bottom:1.5rem;" data-lang="es">Servicios y precios</h3>
+    <div class="info-card">
+      <ul>
+        <li>✦ Astral Healing — $100,000 CLP / 150 USD · 125 min</li>
+        <li>☽ Carta Astral — $70,000 CLP / 98 USD · 60 min</li>
+        <li>☀ Revolución Solar — $60,000 CLP / ~85 USD · 60 min</li>
+        <li>🌿 Reiki a Distancia — $35,000 CLP / 50 USD · 40 min</li>
+        <li>🔮 Theta Healing — $50,000 CLP / 70 USD · 40 min</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- PAYMENT SECTION -->
+<section style="padding:5rem 6rem;background:linear-gradient(160deg,#2E1F3E,#1A1028);text-align:center;">
+  <div class="section-label center" style="color:var(--gold);justify-content:center;" data-lang="en">Choose Your Session</div>
+  <div class="section-label center" style="color:var(--gold);justify-content:center;display:none;" data-lang="es">Elige Tu Sesión</div>
+  <h2 style="color:var(--warm-cream);margin-bottom:0.5rem;" data-lang="en">Book & <em style="color:var(--gold-light);">Pay Online</em></h2>
+  <h2 style="color:var(--warm-cream);margin-bottom:0.5rem;display:none;" data-lang="es">Reserva & <em style="color:var(--gold-light);">Paga Online</em></h2>
+  <p style="color:rgba(250,246,240,0.5);font-family:'Cormorant Garamond',serif;font-size:1rem;margin-bottom:3rem;" data-lang="en">Secure payment via Stripe · All sessions online · Worldwide</p>
+  <p style="color:rgba(250,246,240,0.5);font-family:'Cormorant Garamond',serif;font-size:1rem;margin-bottom:3rem;display:none;" data-lang="es">Pago seguro via Stripe · Todas las sesiones online · En todo el mundo</p>
+
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;max-width:900px;margin:0 auto 1.5rem;">
+    <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(201,169,110,0.2);border-radius:6px;padding:1.8rem 1.2rem;text-align:center;">
+      <div style="font-size:1.5rem;margin-bottom:0.8rem;">☽</div>
+      <div style="font-family:'Playfair Display',serif;color:var(--warm-cream);font-size:1rem;margin-bottom:0.3rem;" data-lang="en">Astral Healing</div>
+      <div style="font-family:'Playfair Display',serif;color:var(--warm-cream);font-size:1rem;margin-bottom:0.3rem;display:none;" data-lang="es">Sanación Astral</div>
+      <div style="color:var(--gold-light);font-size:0.9rem;margin-bottom:0.3rem;">$150 USD</div>
+      <div style="color:rgba(250,246,240,0.4);font-size:0.72rem;margin-bottom:1.2rem;">$100.000 CLP · 60 min</div>
+      <a href="https://encuadrado.com/p/isidora-astroyoga" target="_blank" style="display:block;background:linear-gradient(135deg,var(--purple),var(--rose));color:white;padding:0.6rem 1rem;border-radius:4px;font-size:0.8rem;text-decoration:none;letter-spacing:0.05em;" data-lang="en">Book Now</a>
+      <a href="https://encuadrado.com/p/isidora-astroyoga" target="_blank" style="display:block;background:linear-gradient(135deg,var(--purple),var(--rose));color:white;padding:0.6rem 1rem;border-radius:4px;font-size:0.8rem;text-decoration:none;letter-spacing:0.05em;display:none;" data-lang="es">Reservar</a>
+    </div>
+    <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(201,169,110,0.2);border-radius:6px;padding:1.8rem 1.2rem;text-align:center;">
+      <div style="font-size:1.5rem;margin-bottom:0.8rem;">✦</div>
+      <div style="font-family:'Playfair Display',serif;color:var(--warm-cream);font-size:1rem;margin-bottom:0.3rem;">Carta Astral</div>
+      <div style="color:var(--gold-light);font-size:0.9rem;margin-bottom:0.3rem;">$98 USD</div>
+      <div style="color:rgba(250,246,240,0.4);font-size:0.72rem;margin-bottom:1.2rem;">$70.000 CLP · 75 min</div>
+      <a href="https://encuadrado.com/p/isidora-astroyoga" target="_blank" style="display:block;background:linear-gradient(135deg,var(--purple),var(--rose));color:white;padding:0.6rem 1rem;border-radius:4px;font-size:0.8rem;text-decoration:none;letter-spacing:0.05em;" data-lang="en">Book Now</a>
+      <a href="https://encuadrado.com/p/isidora-astroyoga" target="_blank" style="display:block;background:linear-gradient(135deg,var(--purple),var(--rose));color:white;padding:0.6rem 1rem;border-radius:4px;font-size:0.8rem;text-decoration:none;letter-spacing:0.05em;display:none;" data-lang="es">Reservar</a>
+    </div>
+    <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(201,169,110,0.2);border-radius:6px;padding:1.8rem 1.2rem;text-align:center;">
+      <div style="font-size:1.5rem;margin-bottom:0.8rem;">☀</div>
+      <div style="font-family:'Playfair Display',serif;color:var(--warm-cream);font-size:1rem;margin-bottom:0.3rem;" data-lang="en">Revolución Solar</div>
+      <div style="color:var(--gold-light);font-size:0.9rem;margin-bottom:0.3rem;">$85 USD</div>
+      <div style="color:rgba(250,246,240,0.4);font-size:0.72rem;margin-bottom:1.2rem;">$60.000 CLP · 60 min</div>
+      <a href="https://encuadrado.com/p/isidora-astroyoga" target="_blank" style="display:block;background:linear-gradient(135deg,var(--purple),var(--rose));color:white;padding:0.6rem 1rem;border-radius:4px;font-size:0.8rem;text-decoration:none;letter-spacing:0.05em;" data-lang="en">Book Now</a>
+      <a href="https://encuadrado.com/p/isidora-astroyoga" target="_blank" style="display:block;background:linear-gradient(135deg,var(--purple),var(--rose));color:white;padding:0.6rem 1rem;border-radius:4px;font-size:0.8rem;text-decoration:none;letter-spacing:0.05em;display:none;" data-lang="es">Reservar</a>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;max-width:600px;margin:0 auto;">
+    <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(201,169,110,0.2);border-radius:6px;padding:1.8rem 1.2rem;text-align:center;">
+      <div style="font-size:1.5rem;margin-bottom:0.8rem;">🌿</div>
+      <div style="font-family:'Playfair Display',serif;color:var(--warm-cream);font-size:1rem;margin-bottom:0.3rem;" data-lang="en">Reiki a Distancia</div>
+      <div style="font-family:'Playfair Display',serif;color:var(--warm-cream);font-size:1rem;margin-bottom:0.3rem;display:none;" data-lang="es">Reiki a Distancia</div>
+      <div style="color:var(--gold-light);font-size:0.9rem;margin-bottom:0.3rem;">$50 USD</div>
+      <div style="color:rgba(250,246,240,0.4);font-size:0.72rem;margin-bottom:1.2rem;">$35.000 CLP · 45 min</div>
+      <a href="https://encuadrado.com/p/isidora-astroyoga" target="_blank" style="display:block;background:linear-gradient(135deg,var(--purple),var(--rose));color:white;padding:0.6rem 1rem;border-radius:4px;font-size:0.8rem;text-decoration:none;letter-spacing:0.05em;" data-lang="en">Book Now</a>
+      <a href="https://encuadrado.com/p/isidora-astroyoga" target="_blank" style="display:block;background:linear-gradient(135deg,var(--purple),var(--rose));color:white;padding:0.6rem 1rem;border-radius:4px;font-size:0.8rem;text-decoration:none;letter-spacing:0.05em;display:none;" data-lang="es">Reservar</a>
+    </div>
+    <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(201,169,110,0.2);border-radius:6px;padding:1.8rem 1.2rem;text-align:center;">
+      <div style="font-size:1.5rem;margin-bottom:0.8rem;">🔮</div>
+      <div style="font-family:'Playfair Display',serif;color:var(--warm-cream);font-size:1rem;margin-bottom:0.3rem;">Theta Healing</div>
+      <div style="color:var(--gold-light);font-size:0.9rem;margin-bottom:0.3rem;">$70 USD</div>
+      <div style="color:rgba(250,246,240,0.4);font-size:0.72rem;margin-bottom:1.2rem;">$50.000 CLP · 50 min</div>
+      <a href="https://encuadrado.com/p/isidora-astroyoga" target="_blank" style="display:block;background:linear-gradient(135deg,var(--purple),var(--rose));color:white;padding:0.6rem 1rem;border-radius:4px;font-size:0.8rem;text-decoration:none;letter-spacing:0.05em;" data-lang="en">Book Now</a>
+      <a href="https://encuadrado.com/p/isidora-astroyoga" target="_blank" style="display:block;background:linear-gradient(135deg,var(--purple),var(--rose));color:white;padding:0.6rem 1rem;border-radius:4px;font-size:0.8rem;text-decoration:none;letter-spacing:0.05em;display:none;" data-lang="es">Reservar</a>
+    </div>
+  </div>
+  <p style="color:rgba(250,246,240,0.3);font-size:0.72rem;margin-top:2rem;" data-lang="en">🔒 Secure payment via Encuadrado · Trusted by the community</p>
+  <p style="color:rgba(250,246,240,0.3);font-size:0.72rem;margin-top:2rem;display:none;" data-lang="es">🔒 Pago seguro via Encuadrado · De confianza para la comunidad</p>
+</section>
+
+<footer><div class="footer-grid"><div class="footer-brand"><a href="index.html" class="logo">Astro<span>Yoga</span></a><p>Astrology, healing & yoga with Isidora Castro. Online worldwide.</p><div class="social-links" style="margin-top:1.2rem;"><a href="https://www.instagram.com/_astroyoga_/" target="_blank">Instagram</a></div></div><div class="footer-col"><h4>Services</h4><a href="services.html">Astral Healing</a><a href="services.html">Carta Astral</a><a href="services.html">Revolución Solar</a><a href="services.html">Reiki</a><a href="services.html">Theta Healing</a></div><div class="footer-col"><h4>Explore</h4><a href="about.html">About</a><a href="courses.html">Courses</a><a href="resources.html">Free Resources</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a></div><div class="footer-col"><h4>Book</h4><a href="booking.html">Book a Session</a><a href="https://www.instagram.com/_astroyoga_/" target="_blank">Instagram DM</a></div></div><div class="footer-bottom"><span>© 2026 AstroYoga · Isidora Castro</span><span>Online · Worldwide</span></div></footer><div id="chat-bubble"><div id="chat-window" style="display:none;"><div class="chat-header"><div class="chat-avatar-circle">I</div><div><div class="chat-header-name">Isi · AstroYoga</div><div class="chat-header-status">✦ Ask me anything</div></div><button class="chat-close" onclick="toggleChat()">✕</button></div><div id="chat-messages"><div class="msg bot">Hi! 🌿 Ask me about sessions, pricing or how to book.</div></div><div class="chat-input-area"><input type="text" id="chat-input" placeholder="Type a message..." onkeydown="if(event.key==='Enter') sendMsg()"><button id="chat-send" onclick="sendMsg()">➤</button></div></div><button id="chat-toggle" onclick="toggleChat()">✦</button></div><script src="shared.js"></script></body></html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Free Resources — AstroYoga</title><link rel="stylesheet" href="style.css"><style>
+.resources-hero { padding:9rem 6rem 5rem; background:linear-gradient(160deg,#EDE6F5 0%,#F0EEF8 100%); }
+.resources-grid { padding:3rem 6rem 6rem; background:var(--sage-pale); display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+.resource-card { background:white; border-radius:4px; padding:2rem; transition:all 0.3s; text-decoration:none; display:block; border-bottom:3px solid transparent; }
+.resource-card:hover { transform:translateY(-4px); box-shadow:0 15px 40px rgba(92,61,46,0.08); border-bottom-color:var(--sage); }
+.rc-icon { font-size:2.2rem; margin-bottom:1rem; display:block; }
+.rc-type { font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--sage); margin-bottom:0.4rem; display:block; }
+.rc-name { font-family:"Playfair Display",serif; font-size:1.1rem; color:var(--warm-brown); margin-bottom:0.6rem; }
+.rc-desc { font-size:0.82rem; color:var(--text-mid); line-height:1.6; margin-bottom:1.2rem; }
+.rc-link { font-size:0.75rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--sage); display:flex; align-items:center; gap:0.3rem; }
+.ig-section { padding:5rem 6rem; background:white; text-align:center; }
+.ig-cta { display:inline-flex; align-items:center; gap:1rem; background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color:white; padding:1rem 2rem; border-radius:4px; text-decoration:none; font-family:"Jost",sans-serif; font-size:0.82rem; letter-spacing:0.12em; text-transform:uppercase; transition:all 0.3s; margin-top:2rem; }
+.ig-cta:hover { opacity:0.9; transform:translateY(-2px); box-shadow:0 8px 25px rgba(0,0,0,0.2); }
+@media(max-width:900px){ .resources-hero{padding:7rem 1.5rem 4rem;} .resources-grid{grid-template-columns:1fr;padding:3rem 1.5rem;} .ig-section{padding:4rem 1.5rem;} }</style></head><body><nav id="main-nav"><a href="index.html" class="logo">Astro<span>Yoga</span></a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="courses.html">Courses</a></li><li><a href="cosmic.html">Cosmic Calendar</a></li>
+    <li><a href="resources.html">Free Resources</a></li><li><a href="faq.html">FAQ</a></li><li><a href="blog.html">Blog</a></li><li><a href="booking.html" class="nav-book">Book Now</a></li></ul><div style="display:flex;gap:0.8rem;align-items:center;"><div class="lang-toggle"><button class="lang-btn active" onclick="setLang('en')">EN</button><button class="lang-btn" onclick="setLang('es')">ES</button></div><button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button></div></nav><div class="mobile-menu" id="mobile-menu"><button class="mobile-close" onclick="toggleMenu()">✕</button><a href="index.html" onclick="toggleMenu()">Home</a><a href="about.html" onclick="toggleMenu()">About</a><a href="services.html" onclick="toggleMenu()">Services</a><a href="courses.html" onclick="toggleMenu()">Courses</a><a href="cosmic.html" onclick="toggleMenu()">Cosmic Calendar</a>
+  <a href="resources.html" onclick="toggleMenu()">Free Resources</a><a href="faq.html" onclick="toggleMenu()">FAQ</a><a href="blog.html" onclick="toggleMenu()">Blog</a><a href="booking.html" onclick="toggleMenu()" style="color:var(--terracotta);">Book Now ✦</a></div>
+<section class="resources-hero">
+  <div class="section-label" data-lang="en">Free Resources</div>
+  <div class="section-label" data-lang="es">Recursos Gratuitos</div>
+  <h1 style="font-size:clamp(2.5rem,4vw,4rem);" data-lang="en">Free<em>Resources</em></h1>
+  <h1 style="font-size:clamp(2.5rem,4vw,4rem);" data-lang="es">Recursos<em>Gratuitos</em></h1>
+  <p style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--text-mid);max-width:550px;margin-top:1rem;" data-lang="en">Free guides, worksheets and resources to help you on your journey. From Isidora's heart to yours.</p>
+  <p style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--text-mid);max-width:550px;margin-top:1rem;" data-lang="es">Guías, hojas de trabajo y recursos gratuitos para ayudarte en tu camino. Del corazón de Isidora al tuyo.</p>
+</section>
+
+<section class="resources-grid">
+  <a href="https://drive.google.com/drive/folders/1tETFs07t2LO1woycuMXHB6H3cCXpECQ5" target="_blank" class="resource-card">
+    <span class="rc-icon">☽</span>
+    <span class="rc-type" data-lang="en">Free Download</span>
+    <span class="rc-type" data-lang="es">Descarga Gratis</span>
+    <div class="rc-name" data-lang="en">Astrology Resources</div>
+    <div class="rc-name" data-lang="es">Recursos de Astrología</div>
+    <p class="rc-desc" data-lang="en">Access Isidora's collection of free astrology guides, charts, and worksheets — all available in her Google Drive.</p>
+    <p class="rc-desc" data-lang="es" style="display:none;">Accede a la colección de guías, cartas y hojas de trabajo gratuitas de Isidora — todas disponibles en su Google Drive.</p>
+    <span class="rc-link">Open Google Drive →</span>
+  </a>
+
+  <div class="resource-card" style="border-bottom-color:var(--terracotta-light);opacity:0.7;">
+    <span class="rc-icon">🌿</span>
+    <span class="rc-type" data-lang="en">Coming Soon</span>
+    <span class="rc-type" data-lang="es">Próximamente</span>
+    <div class="rc-name" data-lang="en">Moon Ritual Guide</div>
+    <div class="rc-name" data-lang="es">Guía de Rituales Lunares</div>
+    <p class="rc-desc" data-lang="en">A practical guide to working with new moon and full moon energy — intentions, rituals, and reflection prompts.</p>
+    <p class="rc-desc" data-lang="es" style="display:none;">Una guía práctica para trabajar con la energía de la luna nueva y llena — intenciones, rituales y preguntas de reflexión.</p>
+    <span class="rc-link" data-lang="en">Coming soon</span>
+    <span class="rc-link" data-lang="es">Próximamente</span>
+  </div>
+
+  <div class="resource-card" style="border-bottom-color:var(--terracotta-light);opacity:0.7;">
+    <span class="rc-icon">✦</span>
+    <span class="rc-type" data-lang="en">Coming Soon</span>
+    <span class="rc-type" data-lang="es">Próximamente</span>
+    <div class="rc-name" data-lang="en">Birth Chart Cheat Sheet</div>
+    <div class="rc-name" data-lang="es">Guía Rápida de Carta Natal</div>
+    <p class="rc-desc" data-lang="en">A beginner-friendly reference guide to the planets, signs, and houses in your birth chart.</p>
+    <p class="rc-desc" data-lang="es" style="display:none;">Una guía de referencia para principiantes sobre los planetas, signos y casas en tu carta natal.</p>
+    <span class="rc-link" data-lang="en">Coming soon</span>
+    <span class="rc-link" data-lang="es">Próximamente</span>
+  </div>
+</section>
+
+<section class="ig-section">
+  <div class="section-label center">Instagram</div>
+  <h2 data-lang="en">Follow for daily <em>astro content</em></h2>
+  <h2 data-lang="es" style="display:none;">Sígueme para contenido <em>astrológico diario</em></h2>
+  <p class="serif" style="max-width:500px;margin:0 auto;" data-lang="en">Isidora shares moon updates, astrological insights, healing tips and behind-the-scenes on Instagram. Come say hi!</p>
+  <p class="serif" style="max-width:500px;margin:0 auto;" data-lang="es">Isidora comparte actualizaciones lunares, insights astrológicos, tips de sanación y más en Instagram. ¡Ven a saludar!</p>
+  <a href="https://www.instagram.com/_astroyoga_/" target="_blank" class="ig-cta">
+    <span>📸</span>
+    <span>@_astroyoga_</span>
+  </a>
+</section><footer><div class="footer-grid"><div class="footer-brand"><a href="index.html" class="logo">Astro<span>Yoga</span></a><p>Astrology, healing & yoga with Isidora Castro. Online worldwide.</p><div class="social-links" style="margin-top:1.2rem;"><a href="https://www.instagram.com/_astroyoga_/" target="_blank">Instagram</a></div></div><div class="footer-col"><h4>Services</h4><a href="services.html">Astral Healing</a><a href="services.html">Carta Astral</a><a href="services.html">Revolución Solar</a><a href="services.html">Reiki</a><a href="services.html">Theta Healing</a></div><div class="footer-col"><h4>Explore</h4><a href="about.html">About</a><a href="courses.html">Courses</a><a href="resources.html">Free Resources</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a></div><div class="footer-col"><h4>Book</h4><a href="booking.html">Book a Session</a><a href="https://www.instagram.com/_astroyoga_/" target="_blank">Instagram DM</a></div></div><div class="footer-bottom"><span>© 2026 AstroYoga · Isidora Castro</span><span>Online · Worldwide</span></div></footer><div id="chat-bubble"><div id="chat-window" style="display:none;"><div class="chat-header"><div class="chat-avatar-circle">I</div><div><div class="chat-header-name">Isi · AstroYoga</div><div class="chat-header-status">✦ Ask me anything</div></div><button class="chat-close" onclick="toggleChat()">✕</button></div><div id="chat-messages"><div class="msg bot">Hi! 🌿 Ask me about sessions, pricing or how to book.</div></div><div class="chat-input-area"><input type="text" id="chat-input" placeholder="Type a message..." onkeydown="if(event.key==='Enter') sendMsg()"><button id="chat-send" onclick="sendMsg()">➤</button></div></div><button id="chat-toggle" onclick="toggleChat()">✦</button></div><script src="shared.js"></script></body></html>

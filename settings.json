@@ -1,0 +1,59 @@
+{
+  "events": [
+    {
+      "day": "25", "month": "Feb", "year": "2026",
+      "type_en": "Saturn in Aries", "tag": "transit",
+      "name_en": "Saturn in Aries — Ongoing",
+      "name_es": "Saturno en Aries — En Curso",
+      "desc_en": "Saturn recently entered Aries for the first time in nearly 30 years. This multi-year transit calls us to build something real from our identity.",
+      "desc_es": "Saturno entró recientemente en Aries por primera vez en casi 30 años.",
+      "guidance_en": "Work with: identity, discipline, long-term goals, healthy boundaries",
+      "guidance_es": "Trabaja con: identidad, disciplina, metas a largo plazo, límites saludables",
+      "icon": "♄"
+    },
+    {
+      "day": "13", "month": "March", "year": "2026",
+      "type_en": "Total Lunar Eclipse", "tag": "eclipse",
+      "name_en": "Total Lunar Eclipse in Virgo",
+      "name_es": "Eclipse Lunar Total en Virgo",
+      "desc_en": "A powerful Full Moon Lunar Eclipse illuminating the Virgo–Pisces axis.",
+      "desc_es": "Un poderoso Eclipse Lunar de Luna Llena iluminando el eje Virgo–Piscis.",
+      "guidance_en": "Work with: release, completion, healing rituals",
+      "guidance_es": "Trabaja con: liberación, completud, rituales de sanación",
+      "icon": "🌕"
+    },
+    {
+      "day": "20", "month": "March", "year": "2026",
+      "type_en": "Mercury Direct", "tag": "retrograde",
+      "name_en": "Mercury Stations Direct",
+      "name_es": "Mercurio Estaciona Directo",
+      "desc_en": "Mercury ends its retrograde and stations direct.",
+      "desc_es": "Mercurio termina su retrógrado y estaciona directo.",
+      "guidance_en": "Work with: clarity returning, restart paused projects",
+      "guidance_es": "Trabaja con: claridad que regresa, reanudar proyectos pausados",
+      "icon": "☿"
+    },
+    {
+      "day": "29", "month": "March", "year": "2026",
+      "type_en": "Solar Eclipse", "tag": "eclipse",
+      "name_en": "Solar Eclipse in Aries",
+      "name_es": "Eclipse Solar en Aries",
+      "desc_en": "A New Moon Solar Eclipse in Aries — the sign of beginnings, identity, and courage.",
+      "desc_es": "Un Eclipse Solar de Luna Nueva en Aries.",
+      "guidance_en": "Work with: new intentions, identity, courage",
+      "guidance_es": "Trabaja con: nuevas intenciones, identidad, coraje",
+      "icon": "🌑"
+    },
+    {
+      "day": "12", "month": "June", "year": "2026",
+      "type_en": "Jupiter Ingress", "tag": "ingress",
+      "name_en": "Jupiter enters Cancer",
+      "name_es": "Júpiter entra en Cáncer",
+      "desc_en": "Jupiter, planet of expansion and abundance, moves into Cancer.",
+      "desc_es": "Júpiter, planeta de la expansión y la abundancia, se mueve hacia Cáncer.",
+      "guidance_en": "Work with: home, family, emotional healing, abundance",
+      "guidance_es": "Trabaja con: hogar, familia, sanación emocional, abundancia",
+      "icon": "♃"
+    }
+  ]
+}

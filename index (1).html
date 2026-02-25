@@ -1,0 +1,128 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Courses — AstroYoga</title><link rel="stylesheet" href="style.css"><style>
+.courses-hero { padding:9rem 6rem 5rem; background:var(--warm-brown); position:relative; overflow:hidden; }
+.courses-hero::before { content:''; position:absolute; top:50%; right:-100px; transform:translateY(-50%); width:500px; height:500px; background:radial-gradient(circle,rgba(201,169,110,0.1) 0%,transparent 70%); border-radius:50%; }
+.courses-hero .section-label { color:var(--gold); }
+.courses-hero .section-label::after { background:var(--gold); }
+.courses-hero h1 { color:var(--warm-cream); }
+.courses-hero p { color:rgba(250,246,240,0.65); }
+.courses-grid { padding:5rem 6rem; background:var(--warm-cream); display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+.course-card { background:white; border-radius:4px; overflow:hidden; transition:all 0.3s; }
+.course-card:hover { transform:translateY(-5px); box-shadow:0 20px 50px rgba(92,61,46,0.1); }
+.course-top { padding:2.5rem 2rem 2rem; position:relative; }
+.course-icon { font-size:2.5rem; margin-bottom:1rem; display:block; }
+.coming-badge { position:absolute; top:1rem; right:1rem; background:var(--gold); color:var(--warm-brown); font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; padding:0.2rem 0.6rem; border-radius:20px; font-weight:500; }
+.course-name { font-family:"Playfair Display",serif; font-size:1.2rem; color:var(--warm-brown); margin-bottom:0.5rem; }
+.course-desc { font-size:0.85rem; color:var(--text-mid); line-height:1.6; margin-bottom:1.2rem; }
+.course-includes li { font-size:0.78rem; color:var(--text-mid); padding:0.25rem 0; list-style:none; display:flex; gap:0.4rem; }
+.course-includes li::before { content:"✦"; color:var(--sage); font-size:0.55rem; margin-top:3px; }
+.course-bottom { padding:1.5rem 2rem; border-top:1px solid var(--sage-pale); display:flex; justify-content:space-between; align-items:center; }
+.course-price { font-family:"Playfair Display",serif; font-size:1.3rem; color:var(--terracotta); }
+.course-price span { font-size:0.75rem; color:var(--text-light); display:block; }
+.notify-section { padding:5rem 6rem; background:var(--terracotta-pale); text-align:center; }
+.notify-form { display:flex; gap:0.8rem; max-width:440px; margin:2rem auto 0; flex-wrap:wrap; justify-content:center; }
+.notify-input { flex:1; min-width:200px; background:white; border:1px solid rgba(196,113,74,0.3); color:var(--text-dark); padding:0.85rem 1.2rem; border-radius:2px; font-family:"Jost",sans-serif; font-size:0.85rem; outline:none; }
+.notify-input:focus { border-color:var(--terracotta); }
+@media(max-width:900px){ .courses-hero{padding:7rem 1.5rem 4rem;} .courses-grid{grid-template-columns:1fr;padding:3rem 1.5rem;} .notify-section{padding:4rem 1.5rem;} }</style></head><body><nav id="main-nav"><a href="index.html" class="logo">Astro<span>Yoga</span></a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="courses.html">Courses</a></li><li><a href="cosmic.html">Cosmic Calendar</a></li>
+    <li><a href="resources.html">Free Resources</a></li><li><a href="faq.html">FAQ</a></li><li><a href="blog.html">Blog</a></li><li><a href="booking.html" class="nav-book">Book Now</a></li></ul><div style="display:flex;gap:0.8rem;align-items:center;"><div class="lang-toggle"><button class="lang-btn active" onclick="setLang('en')">EN</button><button class="lang-btn" onclick="setLang('es')">ES</button></div><button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button></div></nav><div class="mobile-menu" id="mobile-menu"><button class="mobile-close" onclick="toggleMenu()">✕</button><a href="index.html" onclick="toggleMenu()">Home</a><a href="about.html" onclick="toggleMenu()">About</a><a href="services.html" onclick="toggleMenu()">Services</a><a href="courses.html" onclick="toggleMenu()">Courses</a><a href="cosmic.html" onclick="toggleMenu()">Cosmic Calendar</a>
+  <a href="resources.html" onclick="toggleMenu()">Free Resources</a><a href="faq.html" onclick="toggleMenu()">FAQ</a><a href="blog.html" onclick="toggleMenu()">Blog</a><a href="booking.html" onclick="toggleMenu()" style="color:var(--terracotta);">Book Now ✦</a></div>
+<section class="courses-hero">
+  <div class="section-label" data-lang="en">Online Programs</div>
+  <div class="section-label" data-lang="es">Programas Online</div>
+  <h1 style="font-size:clamp(2.5rem,4vw,4rem);" data-lang="en">Courses &<em>Programs</em></h1>
+  <h1 style="font-size:clamp(2.5rem,4vw,4rem);" data-lang="es">Cursos &<em>Programas</em></h1>
+  <p style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;max-width:550px;margin-top:1rem;" data-lang="en">In-depth online courses to help you understand astrology, healing, and yoga on your own terms — at your own pace.</p>
+  <p style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;max-width:550px;margin-top:1rem;" data-lang="es">Cursos online profundos para ayudarte a entender la astrología, la sanación y el yoga a tu propio ritmo.</p>
+</section>
+
+<section class="courses-grid">
+  <div class="course-card">
+    <div class="course-top">
+      <span class="coming-badge" data-lang="en">Coming Soon</span>
+      <span class="coming-badge" data-lang="es">Próximamente</span>
+      <span class="course-icon">☽</span>
+      <div class="course-name" data-lang="en">Intro to Astrology</div>
+      <div class="course-name" data-lang="es">Introducción a la Astrología</div>
+      <p class="course-desc" data-lang="en">Learn to read your own birth chart from scratch. Understand your Sun, Moon, Rising and beyond — no prior knowledge needed.</p>
+      <p class="course-desc" data-lang="es" style="display:none;">Aprende a leer tu carta natal desde cero. Entiende tu Sol, Luna, Ascendente y más — sin conocimiento previo necesario.</p>
+      <ul class="course-includes">
+        <li data-lang="en">8 video modules</li><li data-lang="es">8 módulos en video</li>
+        <li data-lang="en">Workbook & exercises</li><li data-lang="es">Cuaderno y ejercicios</li>
+        <li data-lang="en">Live Q&A session</li><li data-lang="es">Sesión de preguntas en vivo</li>
+        <li data-lang="en">Lifetime access</li><li data-lang="es">Acceso de por vida</li>
+      </ul>
+    </div>
+    <div class="course-bottom">
+      <div class="course-price"><span data-lang="en">Starting from</span><span data-lang="es">Desde</span>TBD</div>
+      <a href="#notify" class="btn-outline" style="font-size:0.72rem;padding:0.6rem 1rem;" data-lang="en">Notify Me</a>
+      <a href="#notify" class="btn-outline" style="font-size:0.72rem;padding:0.6rem 1rem;" data-lang="es">Avisarme</a>
+    </div>
+  </div>
+
+  <div class="course-card">
+    <div class="course-top">
+      <span class="coming-badge" data-lang="en">Coming Soon</span>
+      <span class="coming-badge" data-lang="es">Próximamente</span>
+      <span class="course-icon">🌿</span>
+      <div class="course-name" data-lang="en">Astro-Yoga Journey</div>
+      <div class="course-name" data-lang="es">Viaje AstroYoga</div>
+      <p class="course-desc" data-lang="en">Align your yoga practice with the cosmos. Each module explores a different planetary energy through movement, breath and meditation.</p>
+      <p class="course-desc" data-lang="es" style="display:none;">Alinea tu práctica de yoga con el cosmos. Cada módulo explora una energía planetaria diferente a través del movimiento, la respiración y la meditación.</p>
+      <ul class="course-includes">
+        <li data-lang="en">12 yoga video classes</li><li data-lang="es">12 clases de yoga en video</li>
+        <li data-lang="en">Astrological context for each</li><li data-lang="es">Contexto astrológico para cada una</li>
+        <li data-lang="en">Moon cycle calendar</li><li data-lang="es">Calendario de ciclo lunar</li>
+        <li data-lang="en">Community access</li><li data-lang="es">Acceso a la comunidad</li>
+      </ul>
+    </div>
+    <div class="course-bottom">
+      <div class="course-price"><span data-lang="en">Starting from</span><span data-lang="es">Desde</span>TBD</div>
+      <a href="#notify" class="btn-outline" style="font-size:0.72rem;padding:0.6rem 1rem;" data-lang="en">Notify Me</a>
+      <a href="#notify" class="btn-outline" style="font-size:0.72rem;padding:0.6rem 1rem;" data-lang="es">Avisarme</a>
+    </div>
+  </div>
+
+  <div class="course-card">
+    <div class="course-top">
+      <span class="coming-badge" data-lang="en">Coming Soon</span>
+      <span class="coming-badge" data-lang="es">Próximamente</span>
+      <span class="course-icon">✦</span>
+      <div class="course-name" data-lang="en">Healing & the Stars</div>
+      <div class="course-name" data-lang="es">Sanación y las Estrellas</div>
+      <p class="course-desc" data-lang="en">Integrate Theta Healing with astrological self-awareness. Learn to identify your own limiting beliefs through your chart and release them.</p>
+      <p class="course-desc" data-lang="es" style="display:none;">Integra el Theta Healing con el autoconocimiento astrológico. Aprende a identificar tus propias creencias limitantes a través de tu carta y liberarlas.</p>
+      <ul class="course-includes">
+        <li data-lang="en">10 guided sessions</li><li data-lang="es">10 sesiones guiadas</li>
+        <li data-lang="en">Theta meditation audios</li><li data-lang="es">Audios de meditación theta</li>
+        <li data-lang="en">1 private session with Isidora</li><li data-lang="es">1 sesión privada con Isidora</li>
+        <li data-lang="en">Lifetime access</li><li data-lang="es">Acceso de por vida</li>
+      </ul>
+    </div>
+    <div class="course-bottom">
+      <div class="course-price"><span data-lang="en">Starting from</span><span data-lang="es">Desde</span>TBD</div>
+      <a href="#notify" class="btn-outline" style="font-size:0.72rem;padding:0.6rem 1rem;" data-lang="en">Notify Me</a>
+      <a href="#notify" class="btn-outline" style="font-size:0.72rem;padding:0.6rem 1rem;" data-lang="es">Avisarme</a>
+    </div>
+  </div>
+</section>
+
+<section class="notify-section" id="notify">
+  <h2 data-lang="en">Be the first to <em>know</em></h2>
+  <h2 data-lang="es" style="display:none;">Sé la primera en <em>saber</em></h2>
+  <p class="serif" data-lang="en">Courses are in development. Leave your email and you'll be the first to know when they launch — with an exclusive early-bird discount.</p>
+  <p class="serif" data-lang="es" style="display:none;">Los cursos están en desarrollo. Deja tu email y serás la primera en saber cuando lancen — con un descuento exclusivo de early bird.</p>
+  <div class="notify-form">
+    <input type="email" class="notify-input" id="notify-email" placeholder="your@email.com">
+    <button class="btn-primary" onclick="notifySignup()" data-lang="en">Notify Me</button>
+    <button class="btn-primary" onclick="notifySignup()" data-lang="es">Avisarme</button>
+  </div>
+  <p id="notify-thanks" style="display:none;color:var(--terracotta);font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;margin-top:1rem;">✦ You're on the list! We'll be in touch soon. ✦</p>
+</section>
+<script>
+function notifySignup() {
+  const email = document.getElementById('notify-email').value;
+  if (email && email.includes('@')) {
+    document.getElementById('notify-thanks').style.display = 'block';
+    document.getElementById('notify-email').value = '';
+  }
+}
+</script><footer><div class="footer-grid"><div class="footer-brand"><a href="index.html" class="logo">Astro<span>Yoga</span></a><p>Astrology, healing & yoga with Isidora Castro. Online worldwide.</p><div class="social-links" style="margin-top:1.2rem;"><a href="https://www.instagram.com/_astroyoga_/" target="_blank">Instagram</a></div></div><div class="footer-col"><h4>Services</h4><a href="services.html">Astral Healing</a><a href="services.html">Carta Astral</a><a href="services.html">Revolución Solar</a><a href="services.html">Reiki</a><a href="services.html">Theta Healing</a></div><div class="footer-col"><h4>Explore</h4><a href="about.html">About</a><a href="courses.html">Courses</a><a href="resources.html">Free Resources</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a></div><div class="footer-col"><h4>Book</h4><a href="booking.html">Book a Session</a><a href="https://www.instagram.com/_astroyoga_/" target="_blank">Instagram DM</a></div></div><div class="footer-bottom"><span>© 2026 AstroYoga · Isidora Castro</span><span>Online · Worldwide</span></div></footer><div id="chat-bubble"><div id="chat-window" style="display:none;"><div class="chat-header"><div class="chat-avatar-circle">I</div><div><div class="chat-header-name">Isi · AstroYoga</div><div class="chat-header-status">✦ Ask me anything</div></div><button class="chat-close" onclick="toggleChat()">✕</button></div><div id="chat-messages"><div class="msg bot">Hi! 🌿 Ask me about sessions, pricing or how to book.</div></div><div class="chat-input-area"><input type="text" id="chat-input" placeholder="Type a message..." onkeydown="if(event.key==='Enter') sendMsg()"><button id="chat-send" onclick="sendMsg()">➤</button></div></div><button id="chat-toggle" onclick="toggleChat()">✦</button></div><script src="shared.js"></script></body></html>

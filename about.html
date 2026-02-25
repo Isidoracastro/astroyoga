@@ -1,0 +1,119 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+locale: 'en'
+
+collections:
+
+  # ── HOMEPAGE ──
+  - name: "homepage"
+    label: "🏠 Homepage"
+    files:
+      - name: "homepage"
+        label: "Homepage Content"
+        file: "_data/homepage.json"
+        fields:
+          - { label: "Hero Title Line 1", name: "hero_title1", widget: "string", default: "Astrology" }
+          - { label: "Hero Title Line 2", name: "hero_title2", widget: "string", default: "Healing & Yoga" }
+          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text", default: "Integrative sessions to understand yourself through the stars, heal your energy, and reconnect with your body." }
+          - { label: "About Snippet Text", name: "about_text", widget: "text" }
+
+  # ── SERVICES ──
+  - name: "services"
+    label: "✦ Services & Prices"
+    files:
+      - name: "services"
+        label: "Services"
+        file: "_data/services.json"
+        fields:
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - { label: "Name (EN)", name: "name_en", widget: "string" }
+              - { label: "Name (ES)", name: "name_es", widget: "string" }
+              - { label: "Price CLP", name: "price_clp", widget: "string" }
+              - { label: "Price USD", name: "price_usd", widget: "string" }
+              - { label: "Duration", name: "duration", widget: "string" }
+              - { label: "Description (EN)", name: "desc_en", widget: "text" }
+              - { label: "Description (ES)", name: "desc_es", widget: "text" }
+
+  # ── COSMIC CALENDAR ──
+  - name: "cosmic"
+    label: "🌙 Cosmic Calendar"
+    files:
+      - name: "events"
+        label: "Upcoming Events"
+        file: "_data/cosmic.json"
+        fields:
+          - label: "Events"
+            name: "events"
+            widget: "list"
+            fields:
+              - { label: "Day", name: "day", widget: "string" }
+              - { label: "Month", name: "month", widget: "string" }
+              - { label: "Year", name: "year", widget: "string" }
+              - { label: "Type (EN)", name: "type_en", widget: "string" }
+              - { label: "Event Name (EN)", name: "name_en", widget: "string" }
+              - { label: "Event Name (ES)", name: "name_es", widget: "string" }
+              - { label: "Description (EN)", name: "desc_en", widget: "text" }
+              - { label: "Description (ES)", name: "desc_es", widget: "text" }
+              - { label: "Guidance (EN)", name: "guidance_en", widget: "string" }
+              - { label: "Guidance (ES)", name: "guidance_es", widget: "string" }
+              - { label: "Icon Emoji", name: "icon", widget: "string" }
+              - label: "Tag Type"
+                name: "tag"
+                widget: "select"
+                options: ["eclipse", "retrograde", "ingress", "lunation", "transit"]
+
+  # ── ABOUT ──
+  - name: "about"
+    label: "👤 About Page"
+    files:
+      - name: "about"
+        label: "About Content"
+        file: "_data/about.json"
+        fields:
+          - { label: "Tagline (EN)", name: "tagline_en", widget: "string" }
+          - { label: "Tagline (ES)", name: "tagline_es", widget: "string" }
+          - label: "Story Chapters"
+            name: "chapters"
+            widget: "list"
+            fields:
+              - { label: "Chapter Title", name: "title", widget: "string" }
+              - { label: "Text (EN)", name: "text_en", widget: "text" }
+              - { label: "Text (ES)", name: "text_es", widget: "text" }
+
+  # ── FAQ ──
+  - name: "faq"
+    label: "❓ FAQ"
+    files:
+      - name: "faq"
+        label: "FAQ Questions"
+        file: "_data/faq.json"
+        fields:
+          - label: "Questions"
+            name: "questions"
+            widget: "list"
+            fields:
+              - { label: "Question (EN)", name: "q_en", widget: "string" }
+              - { label: "Question (ES)", name: "q_es", widget: "string" }
+              - { label: "Answer (EN)", name: "a_en", widget: "text" }
+              - { label: "Answer (ES)", name: "a_es", widget: "text" }
+
+  # ── GENERAL SETTINGS ──
+  - name: "settings"
+    label: "⚙️ Settings"
+    files:
+      - name: "settings"
+        label: "Site Settings"
+        file: "_data/settings.json"
+        fields:
+          - { label: "Calendly URL", name: "calendly_url", widget: "string", hint: "Paste your Calendly link here" }
+          - { label: "Instagram URL", name: "instagram_url", widget: "string" }
+          - { label: "Google Drive Resources URL", name: "drive_url", widget: "string" }
+          - { label: "WhatsApp Number", name: "whatsapp", widget: "string", hint: "Include country code e.g. +56912345678" }

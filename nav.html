@@ -1,0 +1,38 @@
+<nav id="main-nav">
+  <a href="index.html" class="logo">Astro<span>Yoga</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html" data-lang="en">Home</a><a href="index.html" data-lang="es">Inicio</a></li>
+    <li><a href="about.html" data-lang="en">About</a><a href="about.html" data-lang="es">Sobre mí</a></li>
+    <li><a href="services.html" data-lang="en">Services</a><a href="services.html" data-lang="es">Servicios</a></li>
+    <li><a href="courses.html" data-lang="en">Courses</a><a href="courses.html" data-lang="es">Cursos</a></li>
+    <li><a href="resources.html" data-lang="en">Free Resources</a><a href="resources.html" data-lang="es">Recursos</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="booking.html" class="nav-book" data-lang="en">Book Now</a><a href="booking.html" class="nav-book" data-lang="es">Reservar</a></li>
+  </ul>
+  <div style="display:flex;gap:0.8rem;align-items:center;">
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('es')">ES</button>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" onclick="toggleMenu()">✕</button>
+  <a href="index.html" onclick="toggleMenu()">Home</a>
+  <a href="about.html" onclick="toggleMenu()">About</a>
+  <a href="services.html" onclick="toggleMenu()">Services</a>
+  <a href="courses.html" onclick="toggleMenu()">Courses</a>
+  <a href="resources.html" onclick="toggleMenu()">Free Resources</a>
+  <a href="faq.html" onclick="toggleMenu()">FAQ</a>
+  <a href="blog.html" onclick="toggleMenu()">Blog</a>
+  <a href="booking.html" onclick="toggleMenu()" style="color:var(--terracotta);">Book Now ✦</a>
+  <div class="lang-toggle" style="margin-top:1rem;">
+    <button class="lang-btn active" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" onclick="setLang('es')">ES</button>
+  </div>
+</div>

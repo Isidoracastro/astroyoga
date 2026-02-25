@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — AstroYoga · Isidora Castro</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.services-hero { padding:9rem 6rem 4rem; background:linear-gradient(160deg,#F8F5FF 0%,#F0E8F5 100%); }
+.services-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; max-width:1100px; margin:3rem auto 0; }
+.service-card { background:white; border-radius:4px; padding:2.5rem; border-left:4px solid transparent; transition:all 0.3s; }
+.service-card:hover { border-left-color:var(--terracotta); box-shadow:0 15px 40px rgba(92,61,46,0.09); }
+.service-card.featured { background:linear-gradient(160deg,#2E1F3E,#4A2D6A); border-left-color:var(--gold); }
+.sc-header { display:flex; align-items:flex-start; gap:1rem; margin-bottom:1.2rem; }
+.sc-icon { font-size:2rem; flex-shrink:0; }
+.sc-badge { font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--sage); display:block; margin-bottom:0.3rem; }
+.sc-name { font-family:"Playfair Display",serif; font-size:1.3rem; color:var(--warm-brown); }
+.service-card.featured .sc-badge { color:var(--gold-light); }
+.service-card.featured .sc-name { color:white; }
+.sc-desc { font-family:"Cormorant Garamond",serif; font-size:1rem; color:var(--text-mid); line-height:1.7; margin-bottom:1.2rem; }
+.service-card.featured .sc-desc { color:rgba(255,255,255,0.65); }
+.sc-what { background:var(--warm-cream); border-radius:2px; padding:1rem 1.2rem; margin-bottom:1.2rem; }
+.service-card.featured .sc-what { background:rgba(255,255,255,0.08); }
+.sc-what h4 { font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--sage); margin-bottom:0.6rem; }
+.service-card.featured .sc-what h4 { color:var(--gold-light); }
+.sc-what ul { list-style:none; }
+.sc-what li { font-size:0.82rem; color:var(--text-mid); padding:0.2rem 0; display:flex; gap:0.5rem; }
+.service-card.featured .sc-what li { color:rgba(255,255,255,0.6); }
+.sc-what li::before { content:"✦"; color:var(--terracotta); font-size:0.6rem; margin-top:2px; }
+.service-card.featured .sc-what li::before { color:var(--gold); }
+.sc-meta { display:flex; gap:1.5rem; margin-bottom:1.2rem; }
+.sc-meta span { font-size:0.75rem; color:var(--text-light); }
+.service-card.featured .sc-meta span { color:rgba(255,255,255,0.45); }
+.sc-price { font-family:"Playfair Display",serif; font-size:1.6rem; color:var(--warm-brown); font-weight:700; white-space:nowrap; }
+.sc-price-usd { font-size:0.82rem; color:var(--text-light); margin-bottom:1.2rem; }
+.service-card.featured .sc-price { color:var(--gold-light); }
+.service-card.featured .sc-price-usd { color:rgba(255,255,255,0.4); }
+.book-btn { display:block; text-align:center; background:var(--terracotta-pale); color:var(--terracotta); border:1px solid var(--terracotta-light); padding:0.75rem; border-radius:2px; font-family:"Jost",sans-serif; font-size:0.75rem; letter-spacing:0.15em; text-transform:uppercase; text-decoration:none; transition:all 0.25s; }
+.book-btn:hover { background:var(--terracotta); color:white; }
+.service-card.featured .book-btn { background:var(--gold); color:var(--warm-brown); border-color:var(--gold); }
+.service-card.featured .book-btn:hover { background:var(--gold-light); }
+@media(max-width:900px){ .services-hero { padding:7rem 1.5rem 3rem; } .services-grid { grid-template-columns:1fr; } }</style>
+</head>
+<body>
+<nav id="main-nav">
+  <a href="index.html" class="logo">Astro<span>Yoga</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html"  data-lang="en">Home</a><a href="index.html" data-lang="es">Inicio</a></li>
+    <li><a href="about.html"  data-lang="en">About</a><a href="about.html" data-lang="es">Sobre mí</a></li>
+    <li><a href="services.html" class='active' data-lang="en">Services</a><a href="services.html" data-lang="es">Servicios</a></li>
+    <li><a href="courses.html"  data-lang="en">Courses</a><a href="courses.html" data-lang="es">Cursos</a></li>
+    <li><a href="cosmic.html">Cosmic Calendar</a></li>
+    <li><a href="resources.html"  data-lang="en">Free Resources</a><a href="resources.html" data-lang="es">Recursos</a></li>
+    <li><a href="faq.html" >FAQ</a></li>
+    <li><a href="blog.html" >Blog</a></li>
+    <li><a href="https://encuadrado.com/p/isidora-astroyoga" target="_blank" class="nav-book" data-lang="en">Book Now</a><a href="https://encuadrado.com/p/isidora-astroyoga" target="_blank" class="nav-book" data-lang="es">Reservar</a></li>
+  </ul>
+  <div style="display:flex;gap:0.8rem;align-items:center;">
+    <div class="lang-toggle"><button class="lang-btn active" onclick="setLang('en')">EN</button><button class="lang-btn" onclick="setLang('es')">ES</button></div>
+    <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" onclick="toggleMenu()">✕</button>
+  <a href="index.html" onclick="toggleMenu()">Home</a>
+  <a href="about.html" onclick="toggleMenu()">About</a>
+  <a href="services.html" onclick="toggleMenu()">Services</a>
+  <a href="courses.html" onclick="toggleMenu()">Courses</a>
+  <a href="cosmic.html" onclick="toggleMenu()">Cosmic Calendar</a>
+  <a href="resources.html" onclick="toggleMenu()">Free Resources</a>
+  <a href="faq.html" onclick="toggleMenu()">FAQ</a>
+  <a href="blog.html" onclick="toggleMenu()">Blog</a>
+  <a href="https://encuadrado.com/p/isidora-astroyoga" target="_blank" onclick="toggleMenu()" style="color:var(--terracotta);">Book Now ✦</a>
+</div>
+
+<section class="services-hero">
+  <div class="section-label" data-lang="en">All Sessions Online</div>
+  <div class="section-label" data-lang="es">Todas las sesiones online</div>
+  <h1 data-lang="en">Sessions &<em>Readings</em></h1>
+  <h1 data-lang="es" style="display:none;">Sesiones &<em>Lecturas</em></h1>
+  <p style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--text-mid);max-width:550px;margin-top:1rem;" data-lang="en">Each session is a unique, deeply personal experience. Choose the one that calls to you — or ask the chatbot if you're unsure.</p>
+  <p style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--text-mid);max-width:550px;margin-top:1rem;" data-lang="es">Cada sesión es única y profundamente personal. Elige la que te llame — o pregunta al chatbot si no estás segura.</p>
+</section>
+
+<section style="padding:3rem 6rem 6rem;background:var(--warm-cream);">
+<div class="services-grid">
+
+  <div class="service-card featured">
+    <div class="sc-header">
+      <span class="sc-icon">✦</span>
+      <div>
+        <span class="sc-badge" data-lang="en">Most Complete</span>
+        <span class="sc-badge" data-lang="es">Más Completo</span>
+        <div class="sc-name">Astral Healing</div>
+      </div>
+    </div>
+    <p class="sc-desc" data-lang="en">Isidora's signature session — a deep, integrative experience that weaves together your birth chart and energy healing for profound transformation.</p>
+    <p class="sc-desc" data-lang="es" style="display:none;">La sesión insignia de Isidora — una experiencia integrativa profunda que entrelaza tu carta natal y la sanación energética para una transformación profunda.</p>
+    <div class="sc-what">
+      <h4 data-lang="en">What's included</h4>
+      <h4 data-lang="es">Qué incluye</h4>
+      <ul>
+        <li data-lang="en">Full natal chart analysis</li><li data-lang="es">Análisis completo de carta natal</li>
+        <li data-lang="en">Energy healing (Reiki or Theta)</li><li data-lang="es">Sanación energética (Reiki o Theta)</li>
+        <li data-lang="en">Personalized guidance & insights</li><li data-lang="es">Orientación e insights personalizados</li>
+        <li data-lang="en">Recording of the session</li><li data-lang="es">Grabación de la sesión</li>
+      </ul>
+    </div>
+    <div class="sc-meta"><span>🎥 Online</span><span>⏱ 125 min</span></div>
+    <div class="sc-price" style="white-space:nowrap;">$100,000 CLP</div>
+    <div class="sc-price-usd">150 USD</div>
+    <a href="https://encuadrado.com/p/isidora-astroyoga" target="_blank" class="book-btn" data-lang="en">Book This Session</a>
+    <a href="https://encuadrado.com/p/isidora-astroyoga" target="_blank" class="book-btn" data-lang="es">Reservar</a>
+  </div>
+
+  <div class="service-card">
+    <div class="sc-header"><span class="sc-icon">☽</span>
+      <div><span class="sc-badge" data-lang="en">Natal Chart Reading</span><span class="sc-badge" data-lang="es">Lectura de Carta Natal</span><div class="sc-name">Carta Astral</div></div>
+    </div>
+    <p class="sc-desc" data-lang="en">A complete reading of your natal chart — your personality, gifts, challenges, relationships, career and life purpose through the lens of astrology.</p>
+    <p class="sc-desc" data-lang="es" style="display:none;">Una lectura completa de tu carta natal — tu personalidad, dones, desafíos, relaciones, carrera y propósito de vida a través de la astrología.</p>
+    <div class="sc-what">
+      <h4 data-lang="en">What's included</h4><h4 data-lang="es">Qué incluye</h4>
+      <ul>
+        <li data-lang="en">Sun, Moon & Rising analysis</li><li data-lang="es">Análisis de Sol, Luna y Ascendente</li>
+        <li data-lang="en">Houses & planetary placements</li><li data-lang="es">Casas y posiciones planetarias</li>
+        <li data-lang="en">Space for your questions</li><li data-lang="es">Espacio para tus preguntas</li>
+      </ul>
+    </div>
+    <div class="sc-meta"><span>🎥 Online</span><span>⏱ 60 min</span></div>
+    <div class="sc-price" style="white-space:nowrap;">$70,000 CLP</div>
+    <div class="sc-price-usd">98 USD</div>
+    <a href="https://encuadrado.com/p/isidora-astroyoga" target="_blank" class="book-btn" data-lang="en">Book This Session</a>
+    <a href="https://encuadrado.com/p/isidora-astroyoga" target="_blank" class="book-btn" data-lang="es">Reservar</a>
+  </div>
+
+  <div class="service-card">
+    <div class="sc-header"><span class="sc-icon">☀</span>
+      <div><span class="sc-badge" data-lang="en">Annual Reading</span><span class="sc-badge" data-lang="es">Lectura Anual</span><div class="sc-name">Revolución Solar</div></div>
+    </div>
+    <p class="sc-desc" data-lang="en">Your solar return chart is cast for the moment the Sun returns to its exact birth position — revealing the themes, energy and opportunities of your year ahead.</p>
+    <p class="sc-desc" data-lang="es" style="display:none;">La carta de revolución solar se traza en el momento en que el Sol regresa a su posición natal — revelando los temas, la energía y las oportunidades de tu año.</p>
+    <div class="sc-what">
+      <h4 data-lang="en">What's included</h4><h4 data-lang="es">Qué incluye</h4>
+      <ul>
+        <li data-lang="en">Solar return chart analysis</li><li data-lang="es">Análisis de carta de revolución solar</li>
+        <li data-lang="en">Key themes for your year</li><li data-lang="es">Temas clave para tu año</li>
+        <li data-lang="en">Practical guidance & timing</li><li data-lang="es">Guía práctica y tiempos clave</li>
+      </ul>
+    </div>
+    <div class="sc-meta"><span>🎥 Online</span><span>⏱ 60 min</span></div>
+    <div class="sc-price" style="white-space:nowrap;">$60,000 CLP</div>
+    <div class="sc-price-usd">~85 USD</div>
+    <a href="https://encuadrado.com/p/isidora-astroyoga" target="_blank" class="book-btn" data-lang="en">Book This Session</a>
+    <a href="https://encuadrado.com/p/isidora-astroyoga" target="_blank" class="book-btn" data-lang="es">Reservar</a>
+  </div>
+
+  <div class="service-card">
+    <div class="sc-header"><span class="sc-icon">🌿</span>
+      <div><span class="sc-badge" data-lang="en">Energy Healing</span><span class="sc-badge" data-lang="es">Sanación Energética</span><div class="sc-name">Sesión Reiki a Distancia</div></div>
+    </div>
+    <p class="sc-desc" data-lang="en">Distance Reiki works across space and time. Isidora channels healing energy to restore balance, release blockages and invite deep relaxation into your body and energy field.</p>
+    <p class="sc-desc" data-lang="es" style="display:none;">El Reiki a distancia funciona más allá del espacio y el tiempo. Isidora canaliza energía sanadora para restaurar el equilibrio, liberar bloqueos e invitar a una relajación profunda.</p>
+    <div class="sc-what">
+      <h4 data-lang="en">What's included</h4><h4 data-lang="es">Qué incluye</h4>
+      <ul>
+        <li data-lang="en">Full distance Reiki session</li><li data-lang="es">Sesión completa de Reiki a distancia</li>
+        <li data-lang="en">Energy field assessment</li><li data-lang="es">Evaluación del campo energético</li>
+        <li data-lang="en">Post-session feedback</li><li data-lang="es">Feedback post-sesión</li>
+      </ul>
+    </div>
+    <div class="sc-meta"><span>🎥 Online</span><span>⏱ 40 min</span></div>
+    <div class="sc-price" style="white-space:nowrap;">$35,000 CLP</div>
+    <div class="sc-price-usd">50 USD</div>
+    <a href="https://encuadrado.com/p/isidora-astroyoga" target="_blank" class="book-btn" data-lang="en">Book This Session</a>
+    <a href="https://encuadrado.com/p/isidora-astroyoga" target="_blank" class="book-btn" data-lang="es">Reservar</a>
+  </div>
+
+  <div class="service-card">
+    <div class="sc-header"><span class="sc-icon">🔮</span>
+      <div><span class="sc-badge" data-lang="en">Deep Belief Work</span><span class="sc-badge" data-lang="es">Trabajo de Creencias</span><div class="sc-name">Theta Healing</div></div>
+    </div>
+    <p class="sc-desc" data-lang="en">Theta Healing accesses the theta brainwave state to identify and transform limiting beliefs at their root — creating profound shifts in how you think, feel and live.</p>
+    <p class="sc-desc" data-lang="es" style="display:none;">El Theta Healing accede al estado de onda cerebral theta para identificar y transformar creencias limitantes en su raíz — creando cambios profundos en cómo piensas, sientes y vives.</p>
+    <div class="sc-what">
+      <h4 data-lang="en">What's included</h4><h4 data-lang="es">Qué incluye</h4>
+      <ul>
+        <li data-lang="en">Belief identification & release</li><li data-lang="es">Identificación y liberación de creencias</li>
+        <li data-lang="en">Theta state guided session</li><li data-lang="es">Sesión guiada en estado theta</li>
+        <li data-lang="en">Integration guidance</li><li data-lang="es">Guía de integración</li>
+      </ul>
+    </div>
+    <div class="sc-meta"><span>🎥 Online</span><span>⏱ 40 min</span></div>
+    <div class="sc-price" style="white-space:nowrap;">$50,000 CLP</div>
+    <div class="sc-price-usd">70 USD</div>
+    <a href="https://encuadrado.com/p/isidora-astroyoga" target="_blank" class="book-btn" data-lang="en">Book This Session</a>
+    <a href="https://encuadrado.com/p/isidora-astroyoga" target="_blank" class="book-btn" data-lang="es">Reservar</a>
+  </div>
+
+</div>
+</section>
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">Astro<span>Yoga</span></a>
+      <p data-lang="en">Astrology, healing & yoga with Isidora Castro. Online worldwide.</p>
+      <p data-lang="es" style="display:none;">Astrología, sanación y yoga. Online en todo el mundo.</p>
+      <div class="social-links" style="margin-top:1.2rem;"><a href="https://www.instagram.com/_astroyoga_/" target="_blank">Instagram</a></div>
+    </div>
+    <div class="footer-col"><h4>Services</h4><a href="services.html">Astral Healing</a><a href="services.html">Carta Astral</a><a href="services.html">Revolución Solar</a><a href="services.html">Reiki</a><a href="services.html">Theta Healing</a></div>
+    <div class="footer-col"><h4>Explore</h4><a href="about.html">About</a><a href="courses.html">Courses</a><a href="resources.html">Free Resources</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a></div>
+    <div class="footer-col"><h4>Book</h4><a href="https://encuadrado.com/p/isidora-astroyoga" target="_blank">Book a Session</a><a href="https://www.instagram.com/_astroyoga_/" target="_blank">Instagram DM</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 AstroYoga · Isidora Castro</span><span>Online · Worldwide</span></div>
+</footer>
+<div id="chat-bubble">
+  <div id="chat-window" style="display:none;">
+    <div class="chat-header">
+      <div class="chat-avatar-circle">I</div>
+      <div><div class="chat-header-name">Isi · AstroYoga</div><div class="chat-header-status">✦ Ask me anything</div></div>
+      <button class="chat-close" onclick="toggleChat()">✕</button>
+    </div>
+    <div id="chat-messages">
+      <div class="msg bot" data-lang="en">Hi! 🌿 Ask me about sessions, pricing or how to book.</div>
+      <div class="msg bot" data-lang="es">¡Hola! 🌿 Pregúntame sobre sesiones o cómo reservar.</div>
+    </div>
+    <div class="chat-input-area">
+      <input type="text" id="chat-input" placeholder="Type a message..." onkeydown="if(event.key==='Enter') sendMsg()">
+      <button id="chat-send" onclick="sendMsg()">➤</button>
+    </div>
+  </div>
+  <button id="chat-toggle" onclick="toggleChat()">✦</button>
+</div>
+<script src="shared.js"></script>
+</body>
+</html>
