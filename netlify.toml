@@ -1,5 +1,5 @@
 [build]
-  publish = "."
+  publish = "astroyoga_CLEAN"
 
 [[redirects]]
   from = "/admin"
